@@ -1,0 +1,11 @@
+
+<h3>the current tab is "{{ current_tab.label }}"</h3>
+
+<ul>
+  {% for tab in tabs %}
+  <li><a href="{% url 'tab' content.tab %}">{{ tab.label }}</a></li>
+  {% endfor %}
+</ul>
+
+<p>{{ content.english }}</p>
+<p>{{ content.japanese }}</p>

@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import Tab, Content
 
-# Register your models here.
+admin.site.register(Tab)
+admin.site.register(Content)
