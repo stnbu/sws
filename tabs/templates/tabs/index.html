@@ -3,7 +3,7 @@
 
 <ul>
   {% for tab in tabs %}
-  <li><a href="{% url 'tab' content.tab %}">{{ tab.label }}</a></li>
+  <li><a href="{% url 'tab' tab.name %}">{{ tab.label }}</a></li>
   {% endfor %}
 </ul>
 

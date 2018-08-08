@@ -3,7 +3,8 @@ from .models import Tab, Content
 
 def tab(request, current_tab):
     tabs = Tab.objects.order_by('order')
-    content = get_object_or_404(Content, tab=current_tab)
+    tab = Tab.objects.get(name=current_tab)
+    content = get_object_or_404(Content, tab=tab)
     context = {
         'tabs': tabs,
         'current_tab': current_tab,
