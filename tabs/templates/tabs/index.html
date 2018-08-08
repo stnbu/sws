@@ -19,8 +19,8 @@
 
 <div class="content">
 <h2>{{ current_tab.label }}</h2>
-<p>{{ content.english }}</p>
-<p>{{ content.japanese }}</p>
+<p>{{ content.english|safe }}</p>
+<p>{{ content.japanese|safe }}</p>
 </div>
 
 </html>
