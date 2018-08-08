@@ -3,6 +3,7 @@
   <head>
     <link rel="shortcut icon" href="{% static 'tabs/bin/favicon.ico' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'tabs/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="/static/tabs/style-{{ current_tab.name }}.css">
   </head>
 
 <div class="menu">
@@ -18,7 +19,11 @@
 </div>
 
 <div class="content">
+
+{% if current_tab.name != "home" %}  {# unfortunate one-off #}
 <h2>{{ current_tab.label }}</h2>
+{% endif %}
+
 <p>{{ content.english|safe }}</p>
 <p>{{ content.japanese|safe }}</p>
 

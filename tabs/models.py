@@ -10,8 +10,8 @@ class Tab(models.Model):
 
 class Content(models.Model):
     tab = models.ForeignKey(Tab, on_delete=models.CASCADE)
-    english = models.TextField()
-    japanese = models.TextField()
+    english = models.TextField(blank=True)
+    japanese = models.TextField(blank=True)
 
     def __str__(self):
         return self.tab.name

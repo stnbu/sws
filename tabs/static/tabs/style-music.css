@@ -1,0 +1,9 @@
+body {
+    background-image: url(/static/tabs/bin/music.jpg);
+    background-color: rgb(0, 0, 0);
+    background-position: center top;
+}
+.content {
+    display: inline-block;
+    width: auto;
+}

@@ -1,0 +1,9 @@
+body {
+    background-image: url(/static/tabs/bin/home.jpg);
+    background-color: rgb(0, 0, 0);
+    background-position: center 100px;
+}
+.content {
+    display: inline-block;
+    width: auto;
+}

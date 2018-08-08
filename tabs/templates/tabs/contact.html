@@ -5,7 +5,9 @@ Your message has been received. Thank you.
 &nbsp;  {# hack. preseve the hight of this element.#}
 </div>
 <form action="{% url 'tab' 'contact' %}" method="post">
-    {% csrf_token %}
+  {% csrf_token %}
+  <table>
     {{ form }}
+    </table>
     <input type="submit" value="Submit">
 </form>
