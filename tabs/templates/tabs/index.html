@@ -1,5 +1,8 @@
-
-<h3>the current tab is "{{ current_tab.label }}"</h3>
+{% load static %}
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="{% static 'tabs/style.css' %}">
+  </head>
 
 <ul>
   {% for tab in tabs %}
@@ -9,3 +12,5 @@
 
 <p>{{ content.english }}</p>
 <p>{{ content.japanese }}</p>
+
+</html>
