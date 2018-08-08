@@ -16,7 +16,7 @@ def tab(request, current_tab_name):
         if request.method == 'POST':
             form = ContactForm(request.POST)
             if form.is_valid():
-                context['contact_form_submitted'] = 'Your message has been sent. Thank you.'
+                context['contact_form_submitted'] = True
         else:
             form = ContactForm()
         context['form'] = form

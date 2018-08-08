@@ -1,6 +1,9 @@
+<div class="alert">
 {% if contact_form_submitted %}
-<strong>{{ contact_form_submitted }}</strong>
+Your message has been received. Thank you.
 {% endif %}
+&nbsp;  {# hack. preseve the hight of this element.#}
+</div>
 <form action="{% url 'tab' 'contact' %}" method="post">
     {% csrf_token %}
     {{ form }}
