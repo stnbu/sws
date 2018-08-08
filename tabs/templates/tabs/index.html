@@ -4,13 +4,22 @@
     <link rel="stylesheet" type="text/css" href="{% static 'tabs/style.css' %}">
   </head>
 
+<div class="menu">
 <ul>
   {% for tab in tabs %}
+  {% if tab == current_tab %}
+  <li><a class="active" href="{% url 'tab' tab.name %}">{{ tab.label }}</a></li>
+  {% else %}
   <li><a href="{% url 'tab' tab.name %}">{{ tab.label }}</a></li>
+  {% endif %}
   {% endfor %}
 </ul>
+</div>
 
+<div class="content">
+<h2>{{ current_tab.label }}</h2>
 <p>{{ content.english }}</p>
 <p>{{ content.japanese }}</p>
+</div>
 
 </html>
