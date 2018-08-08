@@ -1,0 +1,8 @@
+{% if contact_form_submitted %}
+<strong>{{ contact_form_submitted }}</strong>
+{% endif %}
+<form action="{% url 'tab' 'contact' %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>

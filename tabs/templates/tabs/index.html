@@ -1,7 +1,7 @@
 {% load static %}
 <html>
   <head>
-    <link rel="shortcut icon" href="{% static 'tabs/favicon.ico' %}">
+    <link rel="shortcut icon" href="{% static 'tabs/bin/favicon.ico' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'tabs/style.css' %}">
   </head>
 
@@ -21,6 +21,11 @@
 <h2>{{ current_tab.label }}</h2>
 <p>{{ content.english|safe }}</p>
 <p>{{ content.japanese|safe }}</p>
+
+{% if current_tab.name == "contact" %}
+{% include "tabs/contact.html" %}
+{% endif %}
+
 </div>
 
 </html>
