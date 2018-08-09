@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = open(os.path.join(BASE_DIR, 'SECRET_KEY')).read()
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 CAPTCHA_NOISE_FUNCTIONS = ('captcha.helpers.noise_null',)  # enough? probably.
 
