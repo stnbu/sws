@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = open(os.path.join(BASE_DIR, 'SECRET_KEY')).read()
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', '50.116.38.133', '.hijirishimamoto.com']
 
 CAPTCHA_NOISE_FUNCTIONS = ('captcha.helpers.noise_null',)  # enough? probably.
 
@@ -122,3 +122,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
 STATIC_URL = '/static/'
+
+try:
+    from sws.settings_local import *
+except ImportError:
+    print('No local settings file found.')
