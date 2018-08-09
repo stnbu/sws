@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+CAPTCHA_NOISE_FUNCTIONS = ('captcha.helpers.noise_null',)  # enough? probably.
+
 
 # Application definition
 
