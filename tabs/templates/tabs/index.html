@@ -41,8 +41,8 @@ Mike Burr <mburr@unintuitive.org>
 <h2>{{ current_tab.label }}</h2>
 {% endif %}
 
-<p>{{ content.english|safe }}</p>
-<p>{{ content.japanese|safe }}</p>
+{{ content.english|safe }}
+{{ content.japanese|safe }}
 
 {% if current_tab.name == "contact" %}
 {% include "tabs/contact.html" %}
